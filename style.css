@@ -1,0 +1,104 @@
+:root {
+  --primary-brightorange: hsl(31, 77%, 52%);
+  --primary-darkcyan: hsl(184, 100%, 22%);
+  --primary-verydarkcyan: hsl(179, 100%, 13%);
+
+  --neutral-transparentwhite: hsla(0, 0%, 100%, 0.75); /* for the paragraphs */
+  --neutral-verylightgray: hsl(0, 0%, 95%); /* background, headings, buttons */
+
+  --font-size: 15px;
+  --font-family-lexend: 'Lexend Deca';
+  --font-family-big: 'Big Shoulders';
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  font-family: var(--font-family-lexend), sans-serif;
+  font-weight: var(--font-weight-normal);
+  font-size: var(--font-size);
+  width: 100%;
+  min-height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.holder > * {
+  width: 20%;
+  padding: 2em;
+  height: 100%;
+  height: 21.6875rem;
+}
+.card-1 {
+  background-color: var(--primary-brightorange);
+  border-radius: 10px 0 0 10px;
+}
+.card-2 {
+  background-color: var(--primary-darkcyan);
+}
+.card-3 {
+  background-color: var(--primary-verydarkcyan);
+  border-radius: 0 10px 10px 0;
+}
+h1 {
+  color: var(--neutral-verylightgray);
+  font-family: var(--font-family-big), sans-serif;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 1em;
+}
+p {
+  color: var(--neutral-transparentwhite);
+  margin-bottom: 5em;
+}
+main a {
+  background-color: var(--neutral-verylightgray);
+  padding: 1em 1.5em;
+  border-radius: 25px;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 5%;
+}
+.card-1 a {
+  color: var(--primary-brightorange);
+}
+.card-2 a {
+  color: var(--primary-darkcyan);
+}
+.card-3 a {
+  color: var(--primary-verydarkcyan);
+}
+main a:hover {
+  outline: 3px solid var(--neutral-transparentwhite);
+  color: var(--neutral-transparentwhite);
+  background-color: transparent;
+}
+img {
+  margin-bottom: 1em;
+}
+
+
+@media(max-width: 650px) {
+  .holder {
+    flex-direction: column;
+  }
+  .holder > * {
+    width: 80%;
+  }
+  .card-1 {
+    border-radius: 10px 10px 0 0;
+  }
+  .card-3 {
+    border-radius: 0 0 10px 10px;
+  }
+}
